@@ -1,0 +1,29 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.page-header-container h1 {
+  color: var(--gray-700);
+  font-size: clamp(2rem, 2rem + 1vmin, 3rem);
+}
+
+.completed-todo-btn {
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+  border: 0;
+  background: #080;
+  color: #fff;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(85, 85, 85, 0.123);
+  cursor: pointer;
+}
+
+.completed-todo-btn:hover { 
+  opacity: .8;
+  transition: all .3s ease-in-out;
+}
