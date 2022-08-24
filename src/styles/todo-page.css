@@ -8,6 +8,12 @@
   font-size: clamp(2rem, 2rem + 1vmin, 3rem);
 }
 
+.btns-control-todolist {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
 .completed-todo-btn {
   padding: 0 20px;
   height: 45px;
@@ -15,13 +21,12 @@
   border: 0;
   background: #080;
   color: #fff;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(85, 85, 85, 0.123);
   cursor: pointer;
 }
+
+.completed-todo-btn:not(:last-of-type) { margin-right: 10px; }
 
 .completed-todo-btn:hover { 
   opacity: .8;
