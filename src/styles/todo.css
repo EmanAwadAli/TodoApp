@@ -37,11 +37,12 @@
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.todo-item-container:not(:last-of-type) { margin-bottom: 10px; }
 
 .todo-item-container header {
   display: flex;

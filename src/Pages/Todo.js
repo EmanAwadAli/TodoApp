@@ -38,8 +38,8 @@ const Todo = () => {
         id : new Date().toString(),
         text,
         completed: false,
-        priority
-
+        priority,
+        display:true
       }]);
     }
 
