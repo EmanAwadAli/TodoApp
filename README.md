@@ -1,4 +1,4 @@
-# 📌 TODO APP 
+# 🎯 TODO APP 
 
 ## 📑 Review
 In this project, I create a simple web application that allows you to plan and manage your activities and goals.
