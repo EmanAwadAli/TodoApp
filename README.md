@@ -1,4 +1,4 @@
-# 📌 TODO APP 
+# 🎯 TODO APP 
 
 ## 📑 Review
 In this project, I create a simple web application that allows you to plan and manage your activities and goals.
@@ -19,5 +19,4 @@ npm install
 npm start
 ```
 
-## 💡 Note :
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+#### 💡 Note : This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
