@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import AddTodoForm from "../Components/AddTodoForm";
 import TodoList from "../Components/TodoList";
@@ -32,6 +33,17 @@ const Todo = () => {
         ]
     );
 
+    // Search Term
+    const [searchTerm, setSearchTerm] = useState('');
+
+    // Filtered Todo
+    const [filteredTodo, setFiltereToDo] = useState([]);
+
+    // Set Search Term Handler
+    const setsearchTermHandler = (value) => {
+      setSearchTerm(value);
+    }
+
     // Add Todo Handler
     const addItemHandler = (text, priority) => {
       setTodoList([...todoListItems, {
@@ -39,7 +51,7 @@ const Todo = () => {
         text,
         completed: false,
         priority,
-        display:true
+        display: true
       }]);
     }
 
@@ -100,14 +112,37 @@ const Todo = () => {
       )
     }
 
+    // Filter Todo By Search Term
+    const fiterTodoBySearchTerm = (searchTerm) => {
+      const fiterTodo = todoListItems.filter(item => 
+            item.text.trim().toLowerCase().includes(searchTerm.trim().toLowerCase())
+      )
+      setFiltereToDo(fiterTodo);
+    }
+
+    useEffect(() => {
+      fiterTodoBySearchTerm(searchTerm);
+    }, [searchTerm])
+
     return (
         <div className="dashboard-page main-page">
+          <input 
+            type="text" 
+            placeholder="Search With Todo Title" 
+            value={searchTerm}
+            onChange={(e) => setsearchTermHandler(e.target.value) } 
+          />
           <header className='page-header-container'>
             <h1>Todo List 📌</h1>
           </header>
           <AddTodoForm addItem = { addItemHandler }/>
           <div className="todo-lists-container">
-            <TodoList items = { todoListItems} deleteItem={ deleteItemHandler } changeTitle={changeTodoTitleHandler} togglecompletedItem={togglecompletedItemHandler}/>
+            <TodoList 
+            items = { searchTerm !== "" ? filteredTodo : todoListItems } 
+            deleteItem={ deleteItemHandler } 
+            changeTitle={changeTodoTitleHandler} 
+            togglecompletedItem={togglecompletedItemHandler}
+            />
           </div>
           <div className="btns-control-todolist">
             <button className="completed-todo-btn" onClick={() => displayAllTodoHandler ()}>All</button>
