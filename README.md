@@ -1,7 +1,7 @@
 # 🎯 TODO APP 
 
 ## 📑 Review
-In this project, I create a simple web application that allows you to plan and manage your activities and goals.
+In this project I create a simple web application that allows you to plan and manage your activities and goals.
 
 ## 📥 Installation
 In order to run this project you will need to install [node.js](https://nodejs.org/en/) globally on your device after that :
